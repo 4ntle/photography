@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  .btnOpenHamburger, .btnCloseHamburger {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 20px;
+    right: 20px;
+  }
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+  }
+  .navLinks {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    z-index: 50;
+    ul {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      li {
+        margin: 25px 0;
+        font-size: 1.7em;
+        &.active a {
+          color: red;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .mobileMenu {
+    left: 0;
+  }
+}
+
+// Section
+
+.primarySec {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10em;
+  .sectionImg {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Footer
+
+#footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    .navLinks {
+      ul {
+        display: flex;
+        color: red;
+        li {
+          margin: 0 25px;
+          
+        }
+      }
+    }
+    #btnHamburger {
+      display: none;
+    }
+  }
+}
